@@ -1,3 +1,1 @@
-export const config = {
-  matcher: [],
-};
+export {}
