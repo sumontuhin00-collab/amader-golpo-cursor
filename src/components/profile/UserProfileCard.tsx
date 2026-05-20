@@ -11,6 +11,12 @@ type UserData = {
   followers: number
   following: number
   isFollowing?: boolean
+    social?: {
+    facebook?: string
+    whatsapp?: string
+    youtube?: string
+    instagram?: string
+  }
 }
 
 // Profile card with follow/unfollow logic and animations
