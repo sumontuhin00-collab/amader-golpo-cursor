@@ -7,6 +7,12 @@ export type DemoUser = {
   followers: number
   following: number
   isFollowing?: boolean
+  social?: {
+    facebook?: string
+    whatsapp?: string
+    youtube?: string
+    instagram?: string
+  }
 }
 
 export const demoUsers: DemoUser[] = [
@@ -18,6 +24,12 @@ export const demoUsers: DemoUser[] = [
     followers: 1240,
     following: 180,
     isFollowing: false,
+    social: {
+      facebook: "https://facebook.com/",
+      whatsapp: "https://wa.me/+8801",
+      youtube: "https://youtube.com/",
+      instagram: "https://instagram.com/",
+    },
   },
   {
     id: "u2",
@@ -27,6 +39,10 @@ export const demoUsers: DemoUser[] = [
     followers: 980,
     following: 240,
     isFollowing: true,
+    social: {
+      facebook: "https://facebook.com/",
+      youtube: "https://youtube.com/",
+    },
   },
   {
     id: "u3",
@@ -36,6 +52,10 @@ export const demoUsers: DemoUser[] = [
     followers: 450,
     following: 90,
     isFollowing: false,
+    social: {
+      instagram: "https://instagram.com/",
+      whatsapp: "https://wa.me/+8801",
+    },
   },
   {
     id: "u4",
@@ -45,5 +65,9 @@ export const demoUsers: DemoUser[] = [
     followers: 670,
     following: 130,
     isFollowing: false,
+    social: {
+      facebook: "https://facebook.com/",
+      instagram: "https://instagram.com/",
+    },
   },
 ]

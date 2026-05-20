@@ -1,3 +1,7 @@
+
+import Footer from "@/components/footer/Footer";
+
+
 import { HeroSection } from "@/components/home/hero-section";
 import { StoryCard } from "@/components/story-card";
 import { getFeaturedPosts, getTrendingPosts, getPublishedPosts, getCategories } from "@/lib/queries";
@@ -17,6 +21,7 @@ export default async function HomePage() {
 
   return (
     <>
+
       <HeroSection />
 
       {featured.length > 0 && (
@@ -77,7 +82,9 @@ export default async function HomePage() {
             <StoryCard key={post.id} post={post} index={i} />
           ))}
         </div>
+        
       </section>
+      <Footer />
     </>
   );
 }

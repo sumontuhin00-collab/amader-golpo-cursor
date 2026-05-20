@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { User, UserPlus, Check } from "lucide-react"
+import { User, UserPlus, Check, Facebook, Instagram, Youtube, MessageCircle } from "lucide-react"
 
 type UserData = {
   id: string
@@ -47,6 +47,22 @@ export default function UserProfileCard({ user }: { user: UserData }) {
           <div><strong className="text-slate-100">{followers}</strong> followers</div>
           <div><strong className="text-slate-100">{user.following}</strong> following</div>
         </div>
+
+        {/* Social links */}
+        <div className="mt-3 flex items-center gap-2">
+          {user.social?.facebook && (
+            <SocialLink href={user.social.facebook} label="Facebook"><Facebook className="w-4 h-4" /></SocialLink>
+          )}
+          {user.social?.whatsapp && (
+            <SocialLink href={user.social.whatsapp} label="WhatsApp"><MessageCircle className="w-4 h-4" /></SocialLink>
+          )}
+          {user.social?.youtube && (
+            <SocialLink href={user.social.youtube} label="YouTube"><Youtube className="w-4 h-4" /></SocialLink>
+          )}
+          {user.social?.instagram && (
+            <SocialLink href={user.social.instagram} label="Instagram"><Instagram className="w-4 h-4" /></SocialLink>
+          )}
+        </div>
       </div>
 
       <motion.button
@@ -59,5 +75,20 @@ export default function UserProfileCard({ user }: { user: UserData }) {
         <span>{isFollowing ? "Following" : "Follow"}</span>
       </motion.button>
     </motion.article>
+  )
+}
+
+function SocialLink({ href, children, label }: { href: string; children: React.ReactNode; label: string }) {
+  return (
+    <motion.a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={label}
+      whileHover={{ scale: 1.08 }}
+      className="p-2 rounded-md bg-white/3 text-orange-300 hover:drop-shadow-[0_6px_16px_rgba(249,115,22,0.18)] transition-all"
+    >
+      {children}
+    </motion.a>
   )
 }

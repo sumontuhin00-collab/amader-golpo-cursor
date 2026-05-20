@@ -38,19 +38,27 @@ export default function Footer() {
               আমাদের গল্প একটি ডিজিটাল কেন্দ্র যেখানে লেখক ও পাঠক মিলিত হয়ে বাংলা সাহিত্যের নতুন কাহিনি গড়েন। গল্প, কবিতা, উপন্যাস ও প্রবন্ধের জন্য বন্ধুত্বপূর্ণ পরিবেশ।
             </p>
 
-            <div className="flex items-center gap-3 mt-2">
-              <SocialIcon href="https://facebook.com/" label="Facebook">
-                <Facebook />
-              </SocialIcon>
-              <SocialIcon href="https://wa.me/" label="WhatsApp">
-                <MessageCircle />
-              </SocialIcon>
-              <SocialIcon href="https://youtube.com/" label="YouTube">
-                <Youtube />
-              </SocialIcon>
-              <SocialIcon href="https://instagram.com/" label="Instagram">
-                <Instagram />
-              </SocialIcon>
+            <div className="rounded-3xl bg-white/5 p-4 backdrop-blur-sm border border-white/10">
+              <div className="flex items-center justify-between gap-3 mb-3">
+                <div>
+                  <p className="text-sm font-semibold text-slate-100">Follow us</p>
+                  <p className="text-xs text-slate-400">সোশ্যাল মিডিয়ায় আমাদের সাথে যুক্ত থাকুন</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 mt-2">
+                <SocialIcon href="https://www.facebook.com/share/1HiFepG1cQ/" label="Facebook">
+                  <Facebook />
+                </SocialIcon>
+                <SocialIcon href="https://wa.me/qr/HFUHHS7VYOLIE1" label="WhatsApp">
+                  <MessageCircle />
+                </SocialIcon>
+                <SocialIcon href="https://youtube.com/@cozy_minds01?si=i1bCnC6goaoDoifJ" label="YouTube">
+                  <Youtube />
+                </SocialIcon>
+                <SocialIcon href="https://www.instagram.com/m.sumon_07?igsh=MWdqMW9iamRlaG1oYQ==" label="Instagram">
+                  <Instagram />
+                </SocialIcon>
+              </div>
             </div>
           </div>
 
@@ -100,7 +108,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-8 border-t border-white/5 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-slate-400">© 2026 আমাদের গল্প — All rights reserved.</p>
-          <p className="text-sm text-slate-300">Made with <span aria-hidden>❤️</span> in Bangladesh</p>
+          <p className="text-sm text-slate-300">Made by <span aria-hidden>SUMON</span> in Bangladesh</p>
         </div>
       </div>
     </footer>
@@ -125,7 +133,7 @@ function SocialIcon({ href, children, label }: { href: string; children: React.R
     <motion.a
       href={href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label={label}
       whileHover={{ scale: 1.08 }}
       className="p-2 rounded-full bg-white/2 text-orange-300 hover:drop-shadow-[0_8px_20px_rgba(249,115,22,0.25)] transition-all"

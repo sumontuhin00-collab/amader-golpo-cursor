@@ -39,7 +39,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
-    "framer-motion": "^12.16.0",
+    "framer-motion": "^12.39.0",
     "lucide-react": "^0.513.0",
     "next": "^15.3.3",
     "next-auth": "^5.0.0-beta.28",
@@ -58,10 +58,13 @@
     "@types/node": "^22.15.29",
     "@types/react": "^19.1.6",
     "@types/react-dom": "^19.1.5",
+    "autoprefixer": "^10.5.0",
     "eslint": "^9.28.0",
     "eslint-config-next": "^15.3.3",
+    "postcss": "^8.5.15",
     "prisma": "^6.9.0",
-    "tailwindcss": "^4.1.8",
+    "tailwindcss": "^4.3.0",
+    "tailwindscss": "^0.3.0",
     "tsx": "^4.19.4",
     "typescript": "^5.8.3"
   }
