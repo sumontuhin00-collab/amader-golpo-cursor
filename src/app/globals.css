@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-hind-siliguri);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+:root {
+  --radius: 0.75rem;
+  --background: #faf8f5;
+  --foreground: #1a1510;
+  --card: rgba(255, 255, 255, 0.7);
+  --card-foreground: #1a1510;
+  --popover: #ffffff;
+  --popover-foreground: #1a1510;
+  --primary: #8b4513;
+  --primary-foreground: #faf8f5;
+  --secondary: #f0e6d8;
+  --secondary-foreground: #3d2b1f;
+  --muted: #ede5d8;
+  --muted-foreground: #6b5c4f;
+  --accent: #c9a227;
+  --accent-foreground: #1a1510;
+  --destructive: #dc2626;
+  --border: rgba(139, 69, 19, 0.15);
+  --input: rgba(139, 69, 19, 0.12);
+  --ring: #8b4513;
+}
+
+.dark {
+  --background: #0f0d0b;
+  --foreground: #f5f0e8;
+  --card: rgba(26, 22, 18, 0.8);
+  --card-foreground: #f5f0e8;
+  --popover: #1a1612;
+  --popover-foreground: #f5f0e8;
+  --primary: #d4a574;
+  --primary-foreground: #0f0d0b;
+  --secondary: #2a2218;
+  --secondary-foreground: #e8dcc8;
+  --muted: #2a2218;
+  --muted-foreground: #a89880;
+  --accent: #e8c547;
+  --accent-foreground: #0f0d0b;
+  --destructive: #ef4444;
+  --border: rgba(212, 165, 116, 0.15);
+  --input: rgba(212, 165, 116, 0.12);
+  --ring: #d4a574;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "kern" 1;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply backdrop-blur-xl bg-card/60 border border-border/50;
+  }
+
+  .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      rgba(139, 69, 19, 0.08) 0%,
+      rgba(201, 162, 39, 0.12) 50%,
+      rgba(139, 69, 19, 0.06) 100%
+    );
+  }
+
+  .dark .gradient-hero {
+    background: linear-gradient(
+      135deg,
+      rgba(212, 165, 116, 0.06) 0%,
+      rgba(232, 197, 71, 0.08) 50%,
+      rgba(212, 165, 116, 0.04) 100%
+    );
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, var(--primary), var(--accent));
+  }
+
+  .prose-bengali {
+    @apply leading-relaxed text-lg;
+    word-break: break-word;
+  }
+
+  .prose-bengali h1,
+  .prose-bengali h2,
+  .prose-bengali h3 {
+    @apply font-bold mt-8 mb-4;
+  }
+
+  .prose-bengali p {
+    @apply mb-4;
+  }
+
+  .prose-bengali blockquote {
+    @apply border-l-4 border-primary pl-4 italic text-muted-foreground my-6;
+  }
+
+  .prose-bengali img {
+    @apply rounded-xl my-6 max-w-full;
+  }
+
+  .prose-bengali a {
+    @apply text-primary underline-offset-4 hover:underline;
+  }
+
+  .prose-bengali ul,
+  .prose-bengali ol {
+    @apply pl-6 mb-4;
+  }
+
+  .prose-bengali ul {
+    @apply list-disc;
+  }
+
+  .prose-bengali ol {
+    @apply list-decimal;
+  }
+}
