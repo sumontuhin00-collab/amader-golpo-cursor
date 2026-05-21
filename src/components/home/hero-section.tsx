@@ -34,8 +34,8 @@ export function HeroSection() {
             <span className="text-foreground/90">হৃদয়ের কথা লিখুন</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed max-w-2xl mx-auto">
-            কবিতা, গল্প, উপন্যাস — আপনার সৃজনশীলতাকে একটি সুন্দর প্ল্যাটফর্মে
-            ভাগ করুন। পড়ুন, লিখুন, অনুভব করুন।
+            কবিতা, গল্প, উপন্যাস — আপনার সৃজনশীলতাকে আমাদের প্ল্যাটফর্মে
+            তুলে ধরুন। পড়ুন, লিখুন, অনুভব করুন।
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/register">
