@@ -29,7 +29,7 @@ export default async function HomePage() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">বিশেষ গল্প</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
+          <div className="space-y-6">
             {featured.map((post, i) => (
               <StoryCard key={post.id} post={post} featured={i === 0} index={i} />
             ))}
@@ -60,7 +60,7 @@ export default async function HomePage() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-bold">জনপ্রিয়</h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-6">
             {trending.map((post, i) => (
               <StoryCard key={post.id} post={post} index={i} />
             ))}
@@ -77,7 +77,7 @@ export default async function HomePage() {
             </Button>
           </Link>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="space-y-6">
           {latest.posts.map((post, i) => (
             <StoryCard key={post.id} post={post} index={i} />
           ))}

@@ -52,7 +52,7 @@ export default async function SearchPage({
       ) : (
         <>
           <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="space-y-6"
           >
             {posts.map((post, i) => (
               <StoryCard key={post.id} post={post} index={i} />

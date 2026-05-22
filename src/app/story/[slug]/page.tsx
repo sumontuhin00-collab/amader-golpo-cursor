@@ -149,7 +149,7 @@ export default async function StoryPage({
         {related.length > 0 && (
           <section className="mt-16">
             <h2 className="text-2xl font-bold mb-6">সম্পর্কিত গল্প</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="space-y-6">
               {related.map((p, i) => (
                 <StoryCard key={p.id} post={p} index={i} />
               ))}

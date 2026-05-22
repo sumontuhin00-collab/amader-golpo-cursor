@@ -47,7 +47,7 @@ export default async function CategoryPage({
         <EmptyState title="এই বিভাগে কোনো গল্প নেই" />
       ) : (
         <>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-6">
             {posts.map((post, i) => (
               <StoryCard key={post.id} post={post} index={i} />
             ))}
